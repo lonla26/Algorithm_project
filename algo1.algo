@@ -1,0 +1,22 @@
+ALGORITHM sentenceCharacters
+VAR
+    i: INTEGER=0;
+    counterChar :INTEGER=0;
+    wordsNumber:INTEGER=0;
+    vowelsNumber:INTEGER=0;
+    phrase :STRING;
+
+BEGIN
+    FOR i FROM 0 TO phrase.length-1  STEP 1  DO
+        counterChar++;
+        IF (phrase[i]==' ' OR phrase[i]==".") THEN
+            wordsNumber++;
+        END_IF
+        IF (phrase[i]==["a","e","i","o","u","y","A","E","I","O","U","Y"]) THEN
+            vowelsNumber++;
+        END_IF
+    END_FOR
+    write("The number of words is",wordsNumber );
+    write("The number of vowels is",vowelsNumber );
+    write("The number of characters is", counterChar+1);
+END
